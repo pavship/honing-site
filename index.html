@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Хонингование и Растачивание</title>
+	<link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+	<!-- MARK: Menu -->
+	<nav>
+		<ul class="sidebar">
+			<li onclick=hideSidebar(event)><a href="#" class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 96 960 960" width="32"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+			<li><a href="#services">Услуги</a></li>
+			<li><a href="#about">О нас</a></li>
+			<li><a href="#portfolio">Примеры</a></li>
+			<li><a href="#contacts">Контакты</a></li>
+		</ul>
+		<ul>
+			<li><a href="#">
+				<img src="public/images/logo/1_edited.webp" alt="Хонингование.ру логотип">
+			</a></li>
+			<li class="hideOnMobile"><a href="#services">Услуги</a></li>
+			<li class="hideOnMobile"><a href="#about">О нас</a></li>
+			<li class="hideOnMobile"><a href="#portfolio">Примеры</a></li>
+			<li class="hideOnMobile"><a href="#contacts">Контакты</a></li>
+			<li class="menu-button" onclick=showSidebar(event)><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 96 960 960" width="32"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+		</ul>
+	</nav>
+
+	<!-- MARK: Hero -->
+	<section class="hero">
+		<div class="hero-main">
+			<h1>ХОНИНГОВАНИЕ.РУ</h1>
+			<p>
+				<a href="tel:+74957770975">+7 495 777-09-75</a>
+				<br><a href="mailto:zakaz@honingovanie.ru">zakaz@honingovanie.ru</a>
+				<br><a href="https://yandex.ru/maps/org/khoningovaniye_ru/168416273306/?ll=38.753869%2C55.077293&oid=168416273306&ol=biz&z=17">
+					Коломна, проспект Кирова 68
+				</a>
+			</p>
+			<a href="#contact-form-anchor" class="hero-btn">Оставить заявку</a>
+		</div>
+		<video autoplay muted loop>
+	<source src="public/videos/file.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+	</video>
+	</section>
+
+	<!-- MARK: Services -->
+	<section id="services" class="services">
+		<div class="section-title">
+			<div class="simple-line"></div>
+			<div class="decorative-line top-line"></div>
+			<h2>УСЛУГИ</h2>
+			<div class="decorative-line"></div>
+			<div class="simple-line"></div>
+		</div>
+		<div class="services-grid">
+			<div class="service-item">
+				<img src="public/images/services/IMG_0325_300х226.webp" alt="Хонингование труб">
+				<h3>Хонингование труб и цилиндров</h3>
+				<p>Производим хонингование труб длиной до 4000 мм и внутренним диаметром от 50 до 670 мм из любого материала на горизонтальных хонинговальных станках c точностью до H7 и шероховатостью Ra ≥ 0,1 мкм.</p>
+			</div>
+			<div class="service-item">
+				<img src="public/images/services/IMG_20200519_300х226.webp" alt="Хонингование пароконденсаторов">
+				<h3>Хонингование гидроцилиндров</h3>
+				<p>Производим хонингование гильз гидроцилиндров с полным восстановлением геометрии и шероховатости. Восстановленный гидроцилиндр  обойдется гораздо дешевле нового и не уступит по сроку службы и производительности.</p>
+			</div>
+			<div class="service-item">
+				<img src="public/images/services/IMG_0633_300х226.webp" alt="Хонингование цилиндров ДВС">
+				<h3>Хонингование цилиндров ДВС</h3>
+				<p>Производим плосковершинное хонингование стенок цилиндров ДВС с заданной шероховатостью и точностью формы. В процессе обработки, на поверхности образуется характерная сетка, которая создает наилучшие условия для приработки  поршневых колец и поршней.</p>
+			</div>
+			<div class="service-item">
+				<img src="public/images/services/IMG_1580_300х226.webp" alt="Растачивание на ЧПУ">
+				<h3>Растачивание на ЧПУ	и токарных станках</h3>
+				<p>Производим растачивание под хонингование и другие работы на горизонтально-расточном с ЧПУ (стол 1250х1250 мм) и токарных (трубы до L=1900 мм) станках. Обеспечивается высокая точность растачивания, чрезвычайно существенная для последующего хонингования.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- MARK: About Us -->
+	<section id="about">
+		<div class="about-wrapper">
+			<div class="about">
+				<div class="section-title mb-20">
+					<div class="simple-line short-line"></div>
+					<div class="decorative-line top-line short-line"></div>
+					<h2 class="brown">О НАС</h2>
+					<div class="decorative-line short-line"></div>
+					<div class="simple-line short-line"></div>
+				</div>
+				<img src="public/images/about/2023-Model.webp" alt="Наши показатели 2023 г. в цифрах">
+				<p>ХОНИНГОВАНИЕ.РУ специализируется на растачивании и хонинговании точных отверстий. Заводы и ремонтные предприятия со всей страны доверяют нашей команде эти специфичные операции, получая для своих проектов быстрый качественный результат с картами замеров.
+				<br/><br/>В этой области мы имеем огромный опыт и гарантируем создание точной базы для последующей мехобработки, либо восстановление изношенной поверхности цилиндра.
+				<br/><br/>Мы ориентированы на наших клиентов и на развитие отрасли в целом, доверяем всесторонним самым современным достижениям в области машиностроительных и цифровых технологий и всегда стараемся отгрузить продукцию в срок.
+				<br/><br/>Наш профессионализм и условия работы Вас приятно удивят. Мы уже ждем Ваши заготовки!
+				<br/><br/>Обращайтесь!</p>
+			</div>
+		</div>
+	<!-- MARK: Form -->
+		<div id="contact-form-anchor" class="form-wrapper">
+			<form id="contact-form" class="form" enctype="multipart/form-data">
+				<div class="section-title">
+					<div class="simple-line brown-bg short-line"></div>
+					<div class="decorative-line top-line brown-line short-line"></div>
+					<h2 class="dark">НАПРАВИТЬ ЗАЯВКУ</h2>
+					<div class="decorative-line brown-line short-line"></div>
+					<div class="simple-line brown-bg short-line"></div>
+				</div>
+				<input type="text" id="name" name="name" placeholder="Имя" required>
+				<input type="email" id="email" name="email" placeholder="Email" required>
+				<input type="tel" id="tel" name="tel" placeholder="Телефон" required>
+				<textarea id="message" name="message" placeholder="Сообщение"></textarea>
+				<div class="checkbox"> 
+					<input type="checkbox" id="agreement" name="agreement" required>
+					<label for="agreement">
+						Я согласен с
+						<a href="terms.html" target="_blank" rel="noopener noreferrer">
+							Политикой обработки персональных данных
+						</a>
+					</label>
+				</div>
+				<!-- File input for multiple attachments -->
+				<input type="file" id="attachments" name="attachments" multiple>
+				<label for="attachments" class="file-label">Прикрепить файлы</label>
+				<!-- List of uploaded files -->
+				<ul id="fileList" class="file-list"></ul>
+				<button type="submit">Отправить</button>
+			</form>
+		</div>
+	</section>
+
+	<!-- MARK: Gallery -->
+	<section id="portfolio" class="portfolio">
+		<div class="section-title">
+			<div class="simple-line"></div>
+			<div class="decorative-line top-line"></div>
+			<h2>ПРИМЕРЫ</h2>
+			<div class="decorative-line"></div>
+			<div class="simple-line"></div>
+		</div>
+		<div class="gallery">
+			<div class="gallery-item">
+				<img src="public/images/gallery/small/04151d8.webp" data-full="public/images/gallery/large/04151d8.webp" alt="04151d8.webp">
+			</div>
+			<div class="gallery-item">
+				<img src="public/images/gallery/small/0967d62.webp" data-full="public/images/gallery/large/0967d62.webp" alt="0967d62.webp">
+			</div>
+			<div class="gallery-item">
+				<img src="public/images/gallery/small/15cc87c.webp" data-full="public/images/gallery/large/15cc87c.webp" alt="15cc87c.webp">
+			</div>
+			<div class="gallery-item">
+				<img src="public/images/gallery/small/1ae6a7d.webp" data-full="public/images/gallery/large/1ae6a7d.webp" alt="1ae6a7d.webp">
+			</div>
+			<div class="gallery-item">
+				<img src="public/images/gallery/small/222a2bb.webp" data-full="public/images/gallery/large/222a2bb.webp" alt="222a2bb.webp">
+			</div>
+			<div class="gallery-item">
+				<img src="public/images/gallery/small/29c5440.webp" data-full="public/images/gallery/large/29c5440.webp" alt="29c5440.webp">
+			</div>
+			<div class="gallery-item">
+				<img src="public/images/gallery/small/2feb414.webp" data-full="public/images/gallery/large/2feb414.webp" alt="2feb414.webp">
+			</div>
+			<div class="gallery-item">
+				<img src="public/images/gallery/small/54e9f03.webp" data-full="public/images/gallery/large/54e9f03.webp" alt="54e9f03.webp">
+			</div>
+			<div class="gallery-item">
+				<img src="public/images/gallery/small/57c13dc.webp" data-full="public/images/gallery/large/57c13dc.webp" alt="57c13dc.webp">
+			</div>
+			<div class="gallery-item">
+				<img src="public/images/gallery/small/585e483.webp" data-full="public/images/gallery/large/585e483.webp" alt="585e483.webp">
+			</div>
+			<div class="gallery-item">
+				<img src="public/images/gallery/small/5eb1c1e.webp" data-full="public/images/gallery/large/5eb1c1e.webp" alt="5eb1c1e.webp">
+			</div>
+			<div class="gallery-item">
+				<img src="public/images/gallery/small/6b1d974.webp" data-full="public/images/gallery/large/6b1d974.webp" alt="6b1d974.webp">
+			</div>
+			<div class="gallery-item">
+				<img src="public/images/gallery/small/78b62b5.webp" data-full="public/images/gallery/large/78b62b5.webp" alt="78b62b5.webp">
+			</div>
+			<div class="gallery-item">
+				<img src="public/images/gallery/small/849d130.webp" data-full="public/images/gallery/large/849d130.webp" alt="849d130.webp">
+			</div>
+		</div>
+	</section>
+
+	<!-- Оверлей для увеличенных изображений -->
+	<div id="overlay" class="overlay hidden">
+		<span id="close-overlay">&times;</span>
+		<img id="overlay-img" src="" alt="Full Size">
+	</div>
+
+	<!-- Contact Section -->
+	<section id="contacts" class="contacts">
+		<div class="section-title">
+			<div class="simple-line short-line"></div>
+			<div class="decorative-line top-line short-line"></div>
+			<h2 class="brown">КОНТАКТЫ</h2>
+			<div class="decorative-line short-line"></div>
+			<div class="simple-line short-line"></div>
+		</div>
+		<div class="contact-info">
+			<p>Адрес производства: 140411, МО, г. Коломна, проспект Кирова 68</p>
+			<p>Звоните: <a href="tel:+74957770975">+7 495 777-09-75</a></p>
+			<p>Пишите: <a href="mailto:zakaz@honingovanie.ru">zakaz@honingovanie.ru</a></p>
+			<iframe src="https://maps.google.com/maps?q=Коломна, проспект Кирова 68&amp;output=embed" frameborder="0"></iframe>
+		</div>
+	</section>
+
+	<!-- Footer Section -->
+	<footer>
+		<p>&copy; 2018 - 2024 Хонингование.Ру</p>
+	</footer>
+
+</body>
+</html>
