@@ -16,28 +16,28 @@ const uploadedFiles = [] // Array to hold files
 fileInput.addEventListener('change', function(event) {
 	// Loop through selected files and add them to the uploadedFiles array
 	for (const file of event.target.files) {
-			uploadedFiles.push(file) // Store the file in the array
+		uploadedFiles.push(file) // Store the file in the array
 
-			const listItem = document.createElement('li')
-			const text = document.createElement('span')
-			text.textContent = file.name // Display the file name
-			text.className = 'filename'
-			listItem.appendChild(text)
+		const listItem = document.createElement('li')
+		const text = document.createElement('span')
+		text.textContent = file.name // Display the file name
+		text.className = 'filename'
+		listItem.appendChild(text)
 
-			// Create delete button
-			const deleteButton = document.createElement('button')
-			deleteButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 96 960 960" width="32"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg>'
-			deleteButton.className = 'delete-button'
-			deleteButton.addEventListener('click', function() {
-					fileList.removeChild(listItem) // Remove the file from the list
-					const index = uploadedFiles.indexOf(file)
-					if (index > -1) {
-							uploadedFiles.splice(index, 1) // Remove the file from the array
-					}
-			})
+		// Create delete button
+		const deleteButton = document.createElement('button')
+		deleteButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 96 960 960" width="32"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg>'
+		deleteButton.className = 'delete-button'
+		deleteButton.addEventListener('click', function() {
+			fileList.removeChild(listItem) // Remove the file from the list
+			const index = uploadedFiles.indexOf(file)
+			if (index > -1) {
+					uploadedFiles.splice(index, 1) // Remove the file from the array
+			}
+		})
+		listItem.appendChild(deleteButton)
 
-			listItem.appendChild(deleteButton)
-			fileList.appendChild(listItem)
+		fileList.appendChild(listItem)
 	}
 
 	// Clear input to allow for re-selection of the same files
@@ -59,6 +59,11 @@ document.getElementById('contact-form')
 		// Get form data including files
 		// this will include all fields, including file attachments
 		const formData = new FormData(event.target)
+
+		// Log the formData content for debugging
+		for (let [key, value] of formData.entries()) {
+			console.log(key, value)
+		}
 
 		// Send POST request to your server
 		try {
