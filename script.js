@@ -21,6 +21,8 @@ fileInput.addEventListener('change', function(event) {
 	} else {
 			console.log('No files selected')
 	}
+	console.log('uploadedFiles before > ', uploadedFiles)
+
 	// Loop through selected files and add them to the uploadedFiles array
 	for (const file of files) {
 		uploadedFiles.push(file) // Store the file in the array
@@ -50,7 +52,7 @@ fileInput.addEventListener('change', function(event) {
 	// Clear input to allow for re-selection of the same files
 	fileInput.value = ''
 
-	console.log('uploadedFiles > ', uploadedFiles)
+	console.log('uploadedFiles after > ', uploadedFiles)
 })
 
 document.getElementById('contact-form')
