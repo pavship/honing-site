@@ -14,8 +14,15 @@ const fileList = document.getElementById('fileList')
 const fileInput = document.getElementById('attachments')
 const uploadedFiles = [] // Array to hold files
 fileInput.addEventListener('change', function(event) {
+	const files = event.target.files
+	// Debug file input
+	if (files.length > 0) {
+			console.log('Files selected:', files)
+	} else {
+			console.log('No files selected')
+	}
 	// Loop through selected files and add them to the uploadedFiles array
-	for (const file of event.target.files) {
+	for (const file of files) {
 		uploadedFiles.push(file) // Store the file in the array
 
 		const listItem = document.createElement('li')
@@ -64,6 +71,7 @@ document.getElementById('contact-form')
 		for (let [key, value] of formData.entries()) {
 			console.log(key, value)
 		}
+
 
 		// Send POST request to your server
 		try {
