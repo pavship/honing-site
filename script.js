@@ -49,22 +49,14 @@ fileInput.addEventListener('change', function(event) {
 
 	// Clear input to allow for re-selection of the same files
 	fileInput.value = ''
+
+	console.log('uploadedFiles > ', uploadedFiles)
 })
 
 document.getElementById('contact-form')
 	.addEventListener('submit', async function(event) {
-		event.preventDefault() // prevent the default form submission behavior
+		event.preventDefault()
 
-		// // Get form data
-		// const formData = new FormData(event.target)
-		
-		// // Convert FormData to JSON
-		// const formDataObj = {}
-		// formData.forEach((value, key) => {
-		// 	formDataObj[key] = value
-		// })
-		// Get form data including files
-		// this will include all fields, including file attachments
 		const formData = new FormData(event.target)
 
 		// Manually append the files from uploadedFiles to the formData
@@ -77,23 +69,16 @@ document.getElementById('contact-form')
 			console.log(key, value)
 		}
 
-
 		// Send POST request to your server
 		try {
 			const response = await fetch('https://api.honingovanie.ru/enquiry', {
 					method: 'POST',
-					// headers: {
-					// 	'Content-Type': 'application/json' // send the data as JSON
-					// },
-					// body: JSON.stringify(formDataObj) // convert form data to JSON string
-					body: formData // send the FormData object directly
+					body: formData
 			})
 
 			if (response.ok) {
-					// If the server returns a success response
 					alert('Form submitted successfully!')
 			} else {
-					// If there was an error
 					alert('Failed to submit form')
 			}
 		} catch (error) {
@@ -101,6 +86,7 @@ document.getElementById('contact-form')
 		}
 	})
 
+// GALLERY
 // выбираем все миниатюры галереи
 const galleryItems = document.querySelectorAll('.gallery-item img')
 const overlay = document.getElementById('overlay')
