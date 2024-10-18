@@ -67,6 +67,11 @@ document.getElementById('contact-form')
 		// this will include all fields, including file attachments
 		const formData = new FormData(event.target)
 
+		// Manually append the files from uploadedFiles to the formData
+		uploadedFiles.forEach((file) => {
+			formData.append('attachments', file)  // Appending files to 'attachments'
+		})
+
 		// Log the formData content for debugging
 		for (let [key, value] of formData.entries()) {
 			console.log(key, value)
