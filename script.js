@@ -10,6 +10,8 @@ function hideSidebar(e){
 	sidebar.style.display = 'none'
 }
 
+const MAX_TOTAL_SIZE_MB = 25; // Maximum allowed size in MB
+const MAX_TOTAL_SIZE_BYTES = MAX_TOTAL_SIZE_MB * 1024 * 1024; // Convert MB to bytes
 const fileList = document.getElementById('fileList')
 const fileInput = document.getElementById('attachments')
 const uploadedFiles = [] // Array to hold files
@@ -22,6 +24,8 @@ fileInput.addEventListener('change', function(event) {
 			console.log('No files selected')
 	}
 	console.log('uploadedFiles before > ', uploadedFiles)
+	console.log('uploadedFiles size before > ', uploadedFiles
+		.reduce((sum, { size }) => sum += size, 0))
 
 	// Loop through selected files and add them to the uploadedFiles array
 	for (const file of files) {
@@ -29,7 +33,8 @@ fileInput.addEventListener('change', function(event) {
 
 		const listItem = document.createElement('li')
 		const text = document.createElement('span')
-		text.textContent = file.name // Display the file name
+		// Display the file name and size in MB
+		text.textContent = `${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`
 		text.className = 'filename'
 		listItem.appendChild(text)
 
@@ -53,6 +58,8 @@ fileInput.addEventListener('change', function(event) {
 	fileInput.value = ''
 
 	console.log('uploadedFiles after > ', uploadedFiles)
+	console.log('uploadedFiles size after > ', uploadedFiles
+		.reduce((sum, { size }) => sum += size, 0))
 })
 
 document.getElementById('contact-form')
