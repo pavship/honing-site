@@ -61,9 +61,9 @@ document.getElementById('contact-form')
 
 		const formData = new FormData(event.target)
 
-		// Manually append the files from uploadedFiles to the formData
+		// Manually append the files to 'attachments' // Encode the filename
 		uploadedFiles.forEach((file) => {
-			formData.append('attachments', file)  // Appending files to 'attachments'
+			formData.append('attachments', file, encodeURIComponent(file.name))
 		})
 
 		// Log the formData content for debugging
