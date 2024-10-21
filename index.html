@@ -114,6 +114,11 @@
 				<input type="email" id="email" name="email" placeholder="Email" required>
 				<input type="tel" id="tel" name="tel" placeholder="Телефон" required>
 				<textarea id="message" name="message" placeholder="Сообщение"></textarea>
+				<!-- File input for multiple attachments -->
+				<input type="file" id="attachments" name="attachments" multiple>
+				<label for="attachments" class="file-label">Прикрепить файлы (макс. 25MB)</label>
+				<!-- List of uploaded files -->
+				<ul id="fileList" class="file-list"></ul>
 				<div class="checkbox"> 
 					<input type="checkbox" id="agreement" name="agreement" required>
 					<label for="agreement">
@@ -123,11 +128,6 @@
 						</a>
 					</label>
 				</div>
-				<!-- File input for multiple attachments -->
-				<input type="file" id="attachments" name="attachments" multiple>
-				<label for="attachments" class="file-label">Прикрепить файлы</label>
-				<!-- List of uploaded files -->
-				<ul id="fileList" class="file-list"></ul>
 				<button type="submit">Отправить</button>
 			</form>
 		</div>
