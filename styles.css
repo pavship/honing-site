@@ -492,7 +492,7 @@ nav a:hover {
 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	grid-gap: 1rem; */
 	
-	columns: 5 250px;
+	columns: 5 200px;
 	gap: 1rem;
 }
 
